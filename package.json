@@ -1,0 +1,48 @@
+{
+  "name": "@lentix/esconfigs",
+  "version": "0.0.0",
+  "description": "ESConfig Base Files",
+  "private": true,
+  "main": "./dist/index.js",
+  "files": [
+    "*.md",
+    "LICENSE",
+    "src"
+  ],
+  "scripts": {
+    "preinstall": "",
+    "prepare": "",
+    "build": "pnpm run build",
+    "test": "pnpm run jest"
+  },
+  "keywords": [],
+  "author": "Lentix",
+  "license": "MIT",
+  "devDependencies": {
+	 "@lentix/core": "workspace",
+	 "@lentix/tsconfigs": "workspace",
+	 "typescript": "latest"
+  },
+  "dependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-next": "13.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-config-turbo": "latest"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm lint",
+      "pre-push": "pnpm test"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
